@@ -2,7 +2,6 @@
 import type { Ref } from 'vue';
 import { shallowRef } from 'vue';
 import { useFacets } from './useFacets';
-import { idText } from 'typescript';
 
 interface Item {
     id: string;
@@ -31,7 +30,7 @@ interface Item {
 //     })),
 // );
 
-const items = shallowRef([
+const items: Ref<Item[]> = shallowRef([
     {
         id: '1',
         name: 'Item 1',
